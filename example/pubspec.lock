@@ -67,9 +67,11 @@ packages:
   flushbar:
     dependency: transitive
     description:
-      name: flushbar
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: "13c55a888c1693f1c8269ea30d55c614a1bfee16"
+      url: "https://github.com/vincenttarrit/flushbar"
+    source: git
     version: "1.9.1"
   flutter:
     dependency: "direct main"
@@ -137,13 +139,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.6.4"
-  pedantic:
-    dependency: transitive
-    description:
-      name: pedantic
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.8.0+1"
   petitparser:
     dependency: transitive
     description:
@@ -211,7 +206,7 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.11"
+    version: "0.2.15"
   transformer_page_view:
     dependency: transitive
     description:
