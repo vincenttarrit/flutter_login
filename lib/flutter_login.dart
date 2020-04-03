@@ -213,6 +213,7 @@ class FlutterLogin extends StatefulWidget {
     this.messages,
     this.theme,
     this.textColor = const Color(0xFF000000),
+    this.textOpacity = 0.65,
     this.emailValidator,
     this.passwordValidator,
     this.onSubmitAnimationCompleted,
@@ -271,6 +272,8 @@ class FlutterLogin extends StatefulWidget {
   final bool showDebugButtons;
 
   final Color textColor;
+
+  final double textOpacity;
 
   static final FormFieldValidator<String> defaultEmailValidator = (value) {
     if (value.isEmpty || !Regex.email.hasMatch(value)) {
@@ -451,7 +454,7 @@ class _FlutterLoginState extends State<FlutterLogin>
         .copyWith(color: Colors.black54)
         .merge(loginTheme.bodyStyle);
     final textFieldStyle = theme.textTheme.subhead
-        .copyWith(color: widget.textColor.withOpacity(.65), fontSize: 14)
+        .copyWith(color: widget.textColor.withOpacity(widget.textOpacity), fontSize: 14)
         .merge(loginTheme.textFieldStyle);
     final buttonStyle = theme.textTheme.button
         .copyWith(color: Colors.white)
