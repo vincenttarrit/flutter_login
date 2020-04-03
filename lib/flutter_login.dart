@@ -212,7 +212,7 @@ class FlutterLogin extends StatefulWidget {
     this.logo,
     this.messages,
     this.theme,
-    this.textColor = Colors.black,
+    @required this.textColor,
     this.emailValidator,
     this.passwordValidator,
     this.onSubmitAnimationCompleted,
