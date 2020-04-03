@@ -212,7 +212,7 @@ class FlutterLogin extends StatefulWidget {
     this.logo,
     this.messages,
     this.theme,
-    @required this.textColor,
+    this.textColor = const Color(0xFF000000),
     this.emailValidator,
     this.passwordValidator,
     this.onSubmitAnimationCompleted,
@@ -270,7 +270,7 @@ class FlutterLogin extends StatefulWidget {
   /// passed in
   final bool showDebugButtons;
 
-  final MaterialColor textColor;
+  final Color textColor;
 
   static final FormFieldValidator<String> defaultEmailValidator = (value) {
     if (value.isEmpty || !Regex.email.hasMatch(value)) {
