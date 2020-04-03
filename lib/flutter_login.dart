@@ -212,6 +212,7 @@ class FlutterLogin extends StatefulWidget {
     this.logo,
     this.messages,
     this.theme,
+    this.textColor = Colors.black,
     this.emailValidator,
     this.passwordValidator,
     this.onSubmitAnimationCompleted,
@@ -269,6 +270,8 @@ class FlutterLogin extends StatefulWidget {
   /// passed in
   final bool showDebugButtons;
 
+  final MaterialColor textColor;
+
   static final FormFieldValidator<String> defaultEmailValidator = (value) {
     if (value.isEmpty || !Regex.email.hasMatch(value)) {
       return 'Invalid email!';
@@ -295,6 +298,8 @@ class _FlutterLoginState extends State<FlutterLogin>
   AnimationController _logoController;
   AnimationController _titleController;
   double _selectTimeDilation = 1.0;
+
+
 
   @override
   void initState() {
@@ -446,7 +451,7 @@ class _FlutterLoginState extends State<FlutterLogin>
         .copyWith(color: Colors.black54)
         .merge(loginTheme.bodyStyle);
     final textFieldStyle = theme.textTheme.subhead
-        .copyWith(color: Colors.black.withOpacity(.65), fontSize: 14)
+        .copyWith(color: widget.textColor.withOpacity(.65), fontSize: 14)
         .merge(loginTheme.textFieldStyle);
     final buttonStyle = theme.textTheme.button
         .copyWith(color: Colors.white)
