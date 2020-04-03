@@ -1,7 +1,6 @@
 import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_login/src/providers/login_messages.dart';
 
 Size getWidgetSize(GlobalKey key) {
   final RenderBox renderBox = key.currentContext?.findRenderObject();
