@@ -201,7 +201,7 @@ class _AnimatedButtonState extends State<AnimatedButton>
             onTap: !_isLoading ? widget.onPressed : null,
             splashColor: buttonTheme.splashColor,
             customBorder: buttonTheme.shape,
-            onHighlightChanged: (value) => setState(() => _hover = value),
+            onHighlightChanged: (value) {}, // setState(() => _hover = value),
             child: SizeTransition(
               sizeFactor: _sizeAnimation,
               axis: Axis.horizontal,
